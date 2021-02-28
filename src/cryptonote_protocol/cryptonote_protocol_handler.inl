@@ -2621,7 +2621,7 @@ skip:
       m_core.set_target_blockchain_height(target);
       if (target == 0 && context.m_state > cryptonote_connection_context::state_before_handshake && !m_stopping)
       {
-        MCWARNING("global", "swapd is now disconnected from the network");
+        MCWARNING("global", "cryptocoind is now disconnected from the network");
         m_ask_for_txpool_complement = true;
       }
     }

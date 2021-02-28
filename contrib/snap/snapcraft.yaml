@@ -9,10 +9,10 @@ grade: devel
 confinement: strict
 
 apps:
-    swapd:
+    cryptocoind:
         daemon: forking
         command: |
-          swapd-wrapper --detach --data-dir ${SNAP_COMMON} --config-file ${SNAP_USER_DATA}/etc/swapd.conf
+          cryptocoind-wrapper --detach --data-dir ${SNAP_COMMON} --config-file ${SNAP_USER_DATA}/etc/cryptocoind.conf
         plugs:
             - network
             - network-bind
@@ -71,8 +71,8 @@ parts:
         plugin: dump
         source: .
         organize:
-            contrib/snap/swapd.conf: etc/swapd.conf
-            contrib/snap/swapd-wrapper: bin/swapd-wrapper
+            contrib/snap/cryptocoind.conf: etc/cryptocoind.conf
+            contrib/snap/cryptocoind-wrapper: bin/cryptocoind-wrapper
         prime:
             - etc
             - bin
