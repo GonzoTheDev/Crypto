@@ -143,7 +143,7 @@ namespace levin
 				{
 					std::string buff_to_invoke;
 					if(m_cach_in_buffer.size()  == m_current_head.m_cb)
-						buff_to_invoke.cryptocoin(m_cach_in_buffer);
+						buff_to_invoke.swap(m_cach_in_buffer);
 					else
 					{
 						buff_to_invoke.assign(m_cach_in_buffer, 0, (std::string::size_type)m_current_head.m_cb);

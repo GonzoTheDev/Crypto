@@ -348,7 +348,7 @@ public:
   {
     decltype(m_invoke_response_handlers) local_invoke_response_handlers;
     CRITICAL_REGION_BEGIN(m_invoke_response_handlers_lock);
-    local_invoke_response_handlers.cryptocoin(m_invoke_response_handlers);
+    local_invoke_response_handlers.swap(m_invoke_response_handlers);
     m_protocol_released = true;
     CRITICAL_REGION_END();
 
@@ -705,7 +705,7 @@ public:
       return LEVIN_ERROR_CONNECTION_DESTROYED;
 
     CRITICAL_REGION_BEGIN(m_local_inv_buff_lock);
-    buff_out.cryptocoin(m_local_inv_buff);
+    buff_out.swap(m_local_inv_buff);
     m_local_inv_buff.clear();
     CRITICAL_REGION_END();
 

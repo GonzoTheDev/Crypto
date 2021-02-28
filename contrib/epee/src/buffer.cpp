@@ -67,7 +67,7 @@ void buffer::append(const void *data, size_t sz)
       if (size() > 0)
         memcpy(new_storage.data(), storage.data() + offset, storage.size() - offset);
       offset = 0;
-      std::cryptocoin(storage, new_storage);
+      std::swap(storage, new_storage);
     }
   }
   else

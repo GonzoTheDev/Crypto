@@ -4,7 +4,7 @@
 /tags
 log/
 
-# vim cryptocoin files
+# vim swap files
 *.swp
 *.swo
 TAGS

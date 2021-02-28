@@ -101,7 +101,7 @@ namespace net_utils
         if(m_cache.size())
           m_cache += buf;
         else
-          m_cache.cryptocoin(buf);
+          m_cache.swap(buf);
 
         m_is_stop_handling = false;
         while (!m_is_stop_handling) {

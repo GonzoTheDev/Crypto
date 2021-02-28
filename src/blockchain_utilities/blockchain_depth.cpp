@@ -311,7 +311,7 @@ int main(int argc, char* argv[])
       }
       if (!coinbase)
       {
-        std::cryptocoin(txids, new_txids);
+        std::swap(txids, new_txids);
         ++depth;
       }
     }

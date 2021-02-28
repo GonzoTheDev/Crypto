@@ -306,7 +306,7 @@ namespace levin
 			
 			
 			CRITICAL_REGION_BEGIN(m_local_invoke_buff_lock);
-			buff_out.cryptocoin(m_local_invoke_buff);
+			buff_out.swap(m_local_invoke_buff);
 			m_local_invoke_buff.clear();
 			CRITICAL_REGION_END();
 			return m_invoke_res;
@@ -438,7 +438,7 @@ namespace levin
 				CRITICAL_REGION_BEGIN(m_recieved_packets_lock);
 				m_recieved_packets.resize(m_recieved_packets.size() + 1);
 				m_recieved_packets.back().m_hd = head;
-				m_recieved_packets.back().m_body.cryptocoin(local_buff);
+				m_recieved_packets.back().m_body.swap(local_buff);
 				m_recieved_packets.back().m_connection_index  = conn_index;
 				CRITICAL_REGION_END();
 				/*
@@ -448,7 +448,7 @@ namespace levin
 			{//this is some response
 				
 				CRITICAL_REGION_BEGIN(m_local_invoke_buff_lock);
-				m_local_invoke_buff.cryptocoin(local_buff);
+				m_local_invoke_buff.swap(local_buff);
 				m_invoke_res = head.m_return_code;
 				CRITICAL_REGION_END();
 				boost::interprocess::ipcdetail::atomic_write32(&m_invoke_data_ready, 1); //m_invoke_data_ready = true;
@@ -559,7 +559,7 @@ namespace levin
 				{
 					bh = m_recieved_packets.begin()->m_hd;
 					conn_index = m_recieved_packets.begin()->m_connection_index;
-					local_buff.cryptocoin(m_recieved_packets.begin()->m_body);
+					local_buff.swap(m_recieved_packets.begin()->m_body);
 					have_some_work = true;
 					m_recieved_packets.pop_front();
 				}
