@@ -40,7 +40,7 @@ namespace tools
 {
 
 template<typename F>
-void apply_permutation(std::vector<size_t> permutation, const F &swap)
+void apply_permutation(std::vector<size_t> permutation, const F &cryptocoin)
 {
   //sanity check
   for (size_t n = 0; n < permutation.size(); ++n)
@@ -52,7 +52,7 @@ void apply_permutation(std::vector<size_t> permutation, const F &swap)
     while (i != permutation[current])
     {
       size_t next = permutation[current];
-      swap(current, next);
+      cryptocoin(current, next);
       permutation[current] = current;
       current = next;
     }
@@ -64,7 +64,7 @@ template<typename T>
 void apply_permutation(const std::vector<size_t> &permutation, std::vector<T> &v)
 {
   CHECK_AND_ASSERT_THROW_MES(permutation.size() == v.size(), "Mismatched vector sizes");
-  apply_permutation(permutation, [&v](size_t i0, size_t i1){ std::swap(v[i0], v[i1]); });
+  apply_permutation(permutation, [&v](size_t i0, size_t i1){ std::cryptocoin(v[i0], v[i1]); });
 }
 
 }

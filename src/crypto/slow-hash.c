@@ -198,30 +198,30 @@ static inline int use_v4_jit(void)
     const uint64_t chunk3_old[2] = { SWAP64LE(chunk3[0]), SWAP64LE(chunk3[1]) }; \
     \
     uint64_t b1[2]; \
-    memcpy_swap64le(b1, b + 16, 2); \
+    memcpy_cryptocoin64le(b1, b + 16, 2); \
     chunk1[0] = SWAP64LE(chunk3_old[0] + b1[0]); \
     chunk1[1] = SWAP64LE(chunk3_old[1] + b1[1]); \
     \
     uint64_t a0[2]; \
-    memcpy_swap64le(a0, a_, 2); \
+    memcpy_cryptocoin64le(a0, a_, 2); \
     chunk3[0] = SWAP64LE(chunk2_old[0] + a0[0]); \
     chunk3[1] = SWAP64LE(chunk2_old[1] + a0[1]); \
     \
     uint64_t b0[2]; \
-    memcpy_swap64le(b0, b, 2); \
+    memcpy_cryptocoin64le(b0, b, 2); \
     chunk2[0] = SWAP64LE(chunk1_old[0] + b0[0]); \
     chunk2[1] = SWAP64LE(chunk1_old[1] + b0[1]); \
     if (variant >= 4) \
     { \
       uint64_t out_copy[2]; \
-      memcpy_swap64le(out_copy, out, 2); \
+      memcpy_cryptocoin64le(out_copy, out, 2); \
       chunk1_old[0] ^= chunk2_old[0]; \
       chunk1_old[1] ^= chunk2_old[1]; \
       out_copy[0] ^= chunk3_old[0]; \
       out_copy[1] ^= chunk3_old[1]; \
       out_copy[0] ^= chunk1_old[0]; \
       out_copy[1] ^= chunk1_old[1]; \
-      memcpy_swap64le(out, out_copy, 2); \
+      memcpy_cryptocoin64le(out, out_copy, 2); \
     } \
   } while (0)
 
@@ -1445,7 +1445,7 @@ STATIC INLINE void sum_half_blocks(uint8_t* a, const uint8_t* b)
   U64(a)[1] = a1;
 }
 
-STATIC INLINE void swap_blocks(uint8_t *a, uint8_t *b)
+STATIC INLINE void cryptocoin_blocks(uint8_t *a, uint8_t *b)
 {
   uint64_t t[2];
   U64(t)[0] = U64(a)[0];
@@ -1546,7 +1546,7 @@ void cn_slow_hash(const void *data, size_t length, char *hash, int variant, int 
       VARIANT2_2_PORTABLE();
       VARIANT2_PORTABLE_SHUFFLE_ADD(c1, a, long_state, j);
       sum_half_blocks(a1, d);
-      swap_blocks(a1, c);
+      cryptocoin_blocks(a1, c);
       xor_blocks(a1, c);
       VARIANT1_2(U64(c) + 1);
       copy_block(p, c);
@@ -1632,7 +1632,7 @@ static void copy_block(uint8_t* dst, const uint8_t* src) {
   memcpy(dst, src, AES_BLOCK_SIZE);
 }
 
-static void swap_blocks(uint8_t *a, uint8_t *b){
+static void cryptocoin_blocks(uint8_t *a, uint8_t *b){
   uint64_t t[2];
   U64(t)[0] = U64(a)[0];
   U64(t)[1] = U64(a)[1];
@@ -1738,7 +1738,7 @@ void cn_slow_hash(const void *data, size_t length, char *hash, int variant, int 
     VARIANT2_2_PORTABLE();
     VARIANT2_PORTABLE_SHUFFLE_ADD(c1, a, long_state, j);
     sum_half_blocks(a1, d);
-    swap_blocks(a1, c2);
+    cryptocoin_blocks(a1, c2);
     xor_blocks(a1, c2);
     VARIANT1_2(c2 + 8);
     copy_block(&long_state[j], c2);

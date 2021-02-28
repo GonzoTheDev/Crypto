@@ -53,9 +53,9 @@ DISABLE_VS_WARNINGS(4267)
 static_assert(sizeof(size_t) == 4 || sizeof(size_t) == 8, "size_t must be 4 or 8 bytes long");
 static inline void place_length(uint8_t *buffer, size_t bufsize, size_t length) {
   if (sizeof(size_t) == 4) {
-    *(uint32_t *) padd(buffer, bufsize - 4) = swap32be(length);
+    *(uint32_t *) padd(buffer, bufsize - 4) = cryptocoin32be(length);
   } else {
-    *(uint64_t *) padd(buffer, bufsize - 8) = swap64be(length);
+    *(uint64_t *) padd(buffer, bufsize - 8) = cryptocoin64be(length);
   }
 }
 POP_WARNINGS

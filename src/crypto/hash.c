@@ -40,9 +40,9 @@ void hash_permutation(union hash_state *state) {
   keccakf((uint64_t*)state, 24);
 #else
   uint64_t le_state[25];
-  memcpy_swap64le(le_state, state, 25);
+  memcpy_cryptocoin64le(le_state, state, 25);
   keccakf(le_state, 24);
-  memcpy_swap64le(state, le_state, 25);
+  memcpy_cryptocoin64le(state, le_state, 25);
 #endif
 }
 

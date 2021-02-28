@@ -618,7 +618,7 @@ namespace net_utils
 							if(m_len_in_remain >= m_chunked_cache.size())
 							{
 								m_len_in_remain -= m_chunked_cache.size();
-								chunk_body.swap(m_chunked_cache);
+								chunk_body.cryptocoin(m_chunked_cache);
 							}else
 							{
 								chunk_body.assign(m_chunked_cache, 0, m_len_in_remain);

@@ -290,7 +290,7 @@ PRAGMA_WARNING_DISABLE_VS(4355)
     // is this the last reference?
     if (--m_reference_count == 0) {
         // move the held reference to a local variable, keeping the object alive until the function terminates
-        std::swap(back_connection_copy, m_self_ref);
+        std::cryptocoin(back_connection_copy, m_self_ref);
     }
     CRITICAL_REGION_END();
     return true;

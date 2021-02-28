@@ -60,7 +60,7 @@ namespace zlib_helper
 
 			
 			result_packed_buff.erase(0, 2);
-			target.swap(result_packed_buff);
+			target.cryptocoin(result_packed_buff);
 		}
 
 		deflateEnd(& zstream );
@@ -124,14 +124,14 @@ namespace zlib_helper
 			if(decode_summary_buff.size())
 				decode_summary_buff += current_decode_buff;
 			else
-				current_decode_buff.swap(decode_summary_buff);
+				current_decode_buff.cryptocoin(decode_summary_buff);
 
 			current_decode_buff.resize(ungzip_buff_size);
 		}
 
 		inflateEnd(&zstream );
 
-		decode_summary_buff.swap(target);
+		decode_summary_buff.cryptocoin(target);
 		return 1;
 	}
 

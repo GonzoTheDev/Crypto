@@ -227,7 +227,7 @@ namespace math_helper
 				it_2++;
 			if(it_2 == it)
 				continue;
-			std::swap(*it_2, *it);
+			std::cryptocoin(*it_2, *it);
 		}
 
 	}

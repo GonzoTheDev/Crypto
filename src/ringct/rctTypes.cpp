@@ -119,7 +119,7 @@ namespace rct {
     //uint long long to 32 byte key
     void d2h(key & amounth, const xmr_amount in) {
         sc_0(amounth.bytes);
-        memcpy_swap64le(amounth.bytes, &in, 1);
+        memcpy_cryptocoin64le(amounth.bytes, &in, 1);
     }
     
     //uint long long to 32 byte key
