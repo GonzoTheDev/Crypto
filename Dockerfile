@@ -203,11 +203,11 @@ VOLUME /root/.cryptocoin
 VOLUME /wallet
 
 EXPOSE 11111
-EXPOSE 19950
-EXPOSE 29949
-EXPOSE 29950
-EXPOSE 39949
-EXPOSE 39950
+EXPOSE 22222
+EXPOSE 11112
+EXPOSE 22223
+EXPOSE 11113
+EXPOSE 22224
 
-ENTRYPOINT ["cryptocoind", "--p2p-bind-ip=0.0.0.0", "--p2p-bind-port=11111", "--rpc-bind-ip=0.0.0.0", "--rpc-bind-port=19950", "--non-interactive", "--confirm-external-bind"]
+ENTRYPOINT ["cryptocoind", "--p2p-bind-ip=0.0.0.0", "--p2p-bind-port=11111", "--rpc-bind-ip=0.0.0.0", "--rpc-bind-port=22222", "--non-interactive", "--confirm-external-bind"]
 

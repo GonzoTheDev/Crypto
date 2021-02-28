@@ -3,17 +3,17 @@ Description=Crypto Full Node
 After=network.target
 
 [Service]
-User=swap
-Group=swap
+User=cryptocoin
+Group=cryptocoin
 WorkingDirectory=~
-RuntimeDirectory=swap
+RuntimeDirectory=cryptocoin
 
 # Clearnet config
 #
 Type=forking
-PIDFile=/run/swap/cryptocoind.pid
+PIDFile=/run/cryptocoin/cryptocoind.pid
 ExecStart=/usr/bin/cryptocoind --config-file /etc/cryptocoind.conf \
-    --detach --pidfile /run/swap/cryptocoind.pid
+    --detach --pidfile /run/cryptocoin/cryptocoind.pid
 
 # Tor config
 #

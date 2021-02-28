@@ -156,7 +156,7 @@ namespace
     boost::filesystem::path dir = tools::get_default_data_dir();
     // remove .bitmonero, replace with .shared-ringdb
     dir = dir.remove_filename();
-    dir /= ".swap/ringdb";
+    dir /= ".cryptocoin/ringdb";
     return dir.string();
   }
 
