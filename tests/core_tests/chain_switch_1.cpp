@@ -155,8 +155,8 @@ bool gen_chain_switch_1::check_split_not_switched(cryptonote::core& c, size_t ev
   lookup_acc_outs(m_recipient_account_4.get_keys(), tx_pool.front(), get_tx_pub_key_from_extra(tx_pool.front()), get_additional_tx_pub_keys_from_extra(tx_pool.front()), tx_outs, transfered);
   CHECK_EQ(MK_COINS(13), transfered);
 
-  m_chain_1.cryptocoin(blocks);
-  m_tx_pool.cryptocoin(tx_pool);
+  m_chain_1.swap(blocks);
+  m_tx_pool.swap(tx_pool);
 
   return true;
 }

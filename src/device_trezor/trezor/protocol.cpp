@@ -661,13 +661,13 @@ namespace tx {
     CHECK_AND_ASSERT_THROW_MES(m_ct.tx_data.sources.size() == input_size, "Invalid vector size");
 
     tools::apply_permutation(m_ct.source_permutation, [&](size_t i0, size_t i1){
-      std::cryptocoin(m_ct.tx.vin[i0], m_ct.tx.vin[i1]);
-      std::cryptocoin(m_ct.tx_in_hmacs[i0], m_ct.tx_in_hmacs[i1]);
-      std::cryptocoin(m_ct.pseudo_outs[i0], m_ct.pseudo_outs[i1]);
-      std::cryptocoin(m_ct.pseudo_outs_hmac[i0], m_ct.pseudo_outs_hmac[i1]);
-      std::cryptocoin(m_ct.alphas[i0], m_ct.alphas[i1]);
-      std::cryptocoin(m_ct.spend_encs[i0], m_ct.spend_encs[i1]);
-      std::cryptocoin(m_ct.tx_data.sources[i0], m_ct.tx_data.sources[i1]);
+      std::swap(m_ct.tx.vin[i0], m_ct.tx.vin[i1]);
+      std::swap(m_ct.tx_in_hmacs[i0], m_ct.tx_in_hmacs[i1]);
+      std::swap(m_ct.pseudo_outs[i0], m_ct.pseudo_outs[i1]);
+      std::swap(m_ct.pseudo_outs_hmac[i0], m_ct.pseudo_outs_hmac[i1]);
+      std::swap(m_ct.alphas[i0], m_ct.alphas[i1]);
+      std::swap(m_ct.spend_encs[i0], m_ct.spend_encs[i1]);
+      std::swap(m_ct.tx_data.sources[i0], m_ct.tx_data.sources[i1]);
     });
   }
 

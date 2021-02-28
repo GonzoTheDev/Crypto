@@ -166,7 +166,7 @@ namespace cryptonote
   };
   static const command_line::arg_descriptor<std::string> arg_check_updates = {
     "check-updates"
-  , "Check for new versions of cryptocoin: [disabled|notify|download|update]"
+  , "Check for new versions of swap: [disabled|notify|download|update]"
   , "notify"
   };
   static const command_line::arg_descriptor<bool> arg_fluffy_blocks  = {
@@ -488,7 +488,7 @@ namespace cryptonote
       {
         MWARNING("Found old-style blockchain.bin in " << old_files.string());
         MWARNING("Crypto now uses a new format. You can either remove blockchain.bin to start syncing");
-        MWARNING("the blockchain anew, or use cryptocoin-blockchain-export and cryptocoin-blockchain-import to");
+        MWARNING("the blockchain anew, or use swap-blockchain-export and swap-blockchain-import to");
         MWARNING("convert your existing blockchain.bin to the new format. See README.md for instructions.");
         return false;
       }
@@ -838,7 +838,7 @@ namespace cryptonote
     bad_semantics_txes[0].insert(tx_hash);
     if (bad_semantics_txes[0].size() >= BAD_SEMANTICS_TXES_MAX_SIZE)
     {
-      std::cryptocoin(bad_semantics_txes[0], bad_semantics_txes[1]);
+      std::swap(bad_semantics_txes[0], bad_semantics_txes[1]);
       bad_semantics_txes[0].clear();
     }
     bad_semantics_txes_lock.unlock();
@@ -1683,7 +1683,7 @@ namespace cryptonote
   //-----------------------------------------------------------------------------------------------
   bool core::check_updates()
   {
-    static const char software[] = "cryptocoin";
+    static const char software[] = "swap";
 #ifdef BUILD_TAG
     static const char buildtag[] = BOOST_PP_STRINGIZE(BUILD_TAG);
     static const char subdir[] = "cli"; // because it can never be simple

@@ -996,9 +996,9 @@ namespace cryptonote
     switch (decimal_point)
     {
       case 12:
-        return "cryptocoin";
+        return "swap";
       case 6:
-        return "cryptocoinini";
+        return "swapini";
       case 0:
         return "atoms";
       default:

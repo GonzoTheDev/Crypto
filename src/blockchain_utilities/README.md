@@ -12,16 +12,16 @@ See also each utility's "--help" option.
 
 ### Export an existing blockchain database
 
-`$ cryptocoin-blockchain-export`
+`$ swap-blockchain-export`
 
 This loads the existing blockchain and exports it to `$MONERO_DATA_DIR/export/blockchain.raw`
 
 ### Import the exported file
 
-`$ cryptocoin-blockchain-import`
+`$ swap-blockchain-import`
 
 This imports blocks from `$MONERO_DATA_DIR/export/blockchain.raw` (exported using the
-`cryptocoin-blockchain-export` tool as described above) into the current database.
+`swap-blockchain-export` tool as described above) into the current database.
 
 Defaults: `--batch on`, `--batch size 20000`, `--verify on`
 
@@ -30,14 +30,14 @@ Batch size refers to number of blocks and can be adjusted for performance based 
 Verification should only be turned off if importing from a trusted blockchain.
 
 If you encounter an error like "resizing not supported in batch mode", you can just re-run
-the `cryptocoin-blockchain-import` command again, and it will restart from where it left off.
+the `swap-blockchain-import` command again, and it will restart from where it left off.
 
 ```bash
 ## use default settings to import blockchain.raw into database
-$ cryptocoin-blockchain-import
+$ swap-blockchain-import
 
 ## fast import with large batch size, database mode "fastest", verification off
-$ cryptocoin-blockchain-import --batch-size 20000 --database lmdb#fastest --verify off
+$ swap-blockchain-import --batch-size 20000 --database lmdb#fastest --verify off
 
 ```
 
@@ -80,9 +80,9 @@ LMDB flags (more than one may be specified):
 ## Examples:
 
 ```bash
-$ cryptocoin-blockchain-import --database lmdb#fastest
+$ swap-blockchain-import --database lmdb#fastest
 
-$ cryptocoin-blockchain-import --database lmdb#nosync
+$ swap-blockchain-import --database lmdb#nosync
 
-$ cryptocoin-blockchain-import --database lmdb#nosync,nometasync
+$ swap-blockchain-import --database lmdb#nosync,nometasync
 ```

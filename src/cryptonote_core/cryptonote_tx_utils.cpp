@@ -325,9 +325,9 @@ namespace cryptonote
       return memcmp(&tk0.k_image, &tk1.k_image, sizeof(tk0.k_image)) > 0;
     });
     tools::apply_permutation(ins_order, [&] (size_t i0, size_t i1) {
-      std::cryptocoin(tx.vin[i0], tx.vin[i1]);
-      std::cryptocoin(in_contexts[i0], in_contexts[i1]);
-      std::cryptocoin(sources[i0], sources[i1]);
+      std::swap(tx.vin[i0], tx.vin[i1]);
+      std::swap(in_contexts[i0], in_contexts[i1]);
+      std::swap(sources[i0], sources[i1]);
     });
 
     // figure out if we need to make additional tx pubkeys

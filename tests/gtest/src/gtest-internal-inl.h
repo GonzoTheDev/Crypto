@@ -324,7 +324,7 @@ void ShuffleRange(internal::Random* random, int begin, int end,
   for (int range_width = end - begin; range_width >= 2; range_width--) {
     const int last_in_range = begin + range_width - 1;
     const int selected = begin + random->Generate(range_width);
-    std::cryptocoin((*v)[selected], (*v)[last_in_range]);
+    std::swap((*v)[selected], (*v)[last_in_range]);
   }
 }
 

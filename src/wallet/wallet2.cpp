@@ -156,7 +156,7 @@ namespace
     boost::filesystem::path dir = tools::get_default_data_dir();
     // remove .bitmonero, replace with .shared-ringdb
     dir = dir.remove_filename();
-    dir /= ".cryptocoin/ringdb";
+    dir /= ".swap/ringdb";
     return dir.string();
   }
 
@@ -1791,8 +1791,8 @@ void wallet2::scan_output(const cryptonote::transaction &tx, bool miner_tx, cons
     if (!m_encrypt_keys_after_refresh)
     {
       boost::optional<epee::wipeable_string> pwd = m_callback->on_get_password(pool ? "output found in pool" : "output received");
-      THROW_WALLET_EXCEPTION_IF(!pwd, error::password_needed, tr("Password is needed to compute key image for incoming cryptocoin"));
-      THROW_WALLET_EXCEPTION_IF(!verify_password(*pwd), error::password_needed, tr("Invalid password: password is needed to compute key image for incoming cryptocoin"));
+      THROW_WALLET_EXCEPTION_IF(!pwd, error::password_needed, tr("Password is needed to compute key image for incoming swap"));
+      THROW_WALLET_EXCEPTION_IF(!verify_password(*pwd), error::password_needed, tr("Invalid password: password is needed to compute key image for incoming swap"));
       decrypt_keys(*pwd);
       m_encrypt_keys_after_refresh = *pwd;
     }
@@ -3158,7 +3158,7 @@ void wallet2::process_pool_state(const std::vector<std::tuple<cryptonote::transa
     m_scanned_pool_txs[0].insert(tx_hash);
     if (m_scanned_pool_txs[0].size() > 5000)
     {
-      std::cryptocoin(m_scanned_pool_txs[0], m_scanned_pool_txs[1]);
+      std::swap(m_scanned_pool_txs[0], m_scanned_pool_txs[1]);
       m_scanned_pool_txs[0].clear();
     }
   }
@@ -9820,7 +9820,7 @@ std::vector<wallet2::pending_tx> wallet2::create_transactions_2(std::vector<cryp
       {
         if (unused_transfers_indices_per_subaddr[i].first == index_minor)
         {
-          std::cryptocoin(unused_transfers_indices_per_subaddr[0], unused_transfers_indices_per_subaddr[i]);
+          std::swap(unused_transfers_indices_per_subaddr[0], unused_transfers_indices_per_subaddr[i]);
           break;
         }
       }
@@ -9828,7 +9828,7 @@ std::vector<wallet2::pending_tx> wallet2::create_transactions_2(std::vector<cryp
       {
         if (unused_dust_indices_per_subaddr[i].first == index_minor)
         {
-          std::cryptocoin(unused_dust_indices_per_subaddr[0], unused_dust_indices_per_subaddr[i]);
+          std::swap(unused_dust_indices_per_subaddr[0], unused_dust_indices_per_subaddr[i]);
           break;
         }
       }
@@ -13245,7 +13245,7 @@ std::string wallet2::make_uri(const std::string &address, const std::string &pay
     }
   }
 
-  std::string uri = "cryptocoin:" + address;
+  std::string uri = "swap:" + address;
   unsigned int n_fields = 0;
 
   if (!payment_id.empty())
@@ -13274,9 +13274,9 @@ std::string wallet2::make_uri(const std::string &address, const std::string &pay
 //----------------------------------------------------------------------------------------------------
 bool wallet2::parse_uri(const std::string &uri, std::string &address, std::string &payment_id, uint64_t &amount, std::string &tx_description, std::string &recipient_name, std::vector<std::string> &unknown_parameters, std::string &error)
 {
-  if (uri.substr(0, 7) != "cryptocoin:")
+  if (uri.substr(0, 7) != "swap:")
   {
-    error = std::string("URI has wrong scheme (expected \"cryptocoin:\"): ") + uri;
+    error = std::string("URI has wrong scheme (expected \"swap:\"): ") + uri;
     return false;
   }
 

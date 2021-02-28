@@ -1901,7 +1901,7 @@ namespace nodetool
       if (ignore)
       {
         MDEBUG("Ignoring " << be.adr.str());
-        std::cryptocoin(local_peerlist[i], local_peerlist[local_peerlist.size() - 1]);
+        std::swap(local_peerlist[i], local_peerlist[local_peerlist.size() - 1]);
         local_peerlist.resize(local_peerlist.size() - 1);
         --i;
         continue;

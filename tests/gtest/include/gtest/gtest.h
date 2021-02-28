@@ -280,7 +280,7 @@ class GTEST_API_ AssertionResult {
 
   // Assignment operator.
   AssertionResult& operator=(AssertionResult other) {
-    cryptocoin(other);
+    swap(other);
     return *this;
   }
 
@@ -324,7 +324,7 @@ class GTEST_API_ AssertionResult {
   }
 
   // Swap the contents of this AssertionResult with other.
-  void cryptocoin(AssertionResult& other);
+  void swap(AssertionResult& other);
 
   // Stores result of the assertion predicate.
   bool success_;

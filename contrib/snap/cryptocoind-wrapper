@@ -2,7 +2,7 @@
 
 if [ ! -d "$SNAP_USER_DATA/etc" ]; then
   mkdir $SNAP_USER_DATA/etc/
-  cp -R $SNAP/etc/cryptocoind.conf $SNAP_USER_DATA/etc/cryptocoind.conf
+  cp -R $SNAP/etc/swapd.conf $SNAP_USER_DATA/etc/swapd.conf
 fi
 
-exec "$SNAP/bin/cryptocoind" "$@"
+exec "$SNAP/bin/swapd" "$@"

@@ -1139,9 +1139,9 @@ class scoped_ptr {
     }
   }
 
-  friend void cryptocoin(scoped_ptr& a, scoped_ptr& b) {
-    using std::cryptocoin;
-    cryptocoin(a.ptr_, b.ptr_);
+  friend void swap(scoped_ptr& a, scoped_ptr& b) {
+    using std::swap;
+    swap(a.ptr_, b.ptr_);
   }
 
  private:

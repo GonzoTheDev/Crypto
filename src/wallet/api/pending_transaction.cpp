@@ -243,8 +243,8 @@ void PendingTransactionImpl::signMultisigTx() {
             throw std::runtime_error("couldn't sign multisig transaction");
         }
 
-        std::cryptocoin(m_pending_tx, txSet.m_ptx);
-        std::cryptocoin(m_signers, txSet.m_signers);
+        std::swap(m_pending_tx, txSet.m_ptx);
+        std::swap(m_signers, txSet.m_signers);
     } catch (const std::exception& e) {
         m_status = Status_Error;
         m_errorString = std::string(tr("Couldn't sign multisig transaction: ")) + e.what();
