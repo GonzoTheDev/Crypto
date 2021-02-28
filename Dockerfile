@@ -189,25 +189,25 @@ RUN set -ex && \
 COPY --from=builder /src/build/release/bin /usr/local/bin/
 
 # Create monero user
-RUN adduser --system --group --disabled-password swap && \
-	mkdir -p /wallet /home/swap/.swap && \
-	chown -R swap:swap /home/swap/.swap && \
-	chown -R swap:swAP /wallet
+RUN adduser --system --group --disabled-password crypto && \
+	mkdir -p /wallet /home/crypto/.cryptocoin && \
+	chown -R crypto:crypto /home/crypto/.cryptocoin && \
+	chown -R crypto:crypto /wallet
 
 # Contains the blockchain
-VOLUME /root/.swap
+VOLUME /root/.cryptocoin
 
 # Generate your wallet via accessing the container and run:
 # cd /wallet
-# swap-wallet-cli
+# cryptocoin-wallet-cli
 VOLUME /wallet
 
-EXPOSE 19949
+EXPOSE 11111
 EXPOSE 19950
 EXPOSE 29949
 EXPOSE 29950
 EXPOSE 39949
 EXPOSE 39950
 
-ENTRYPOINT ["swapd", "--p2p-bind-ip=0.0.0.0", "--p2p-bind-port=19949", "--rpc-bind-ip=0.0.0.0", "--rpc-bind-port=19950", "--non-interactive", "--confirm-external-bind"]
+ENTRYPOINT ["cryptocoind", "--p2p-bind-ip=0.0.0.0", "--p2p-bind-port=11111", "--rpc-bind-ip=0.0.0.0", "--rpc-bind-port=19950", "--non-interactive", "--confirm-external-bind"]
 

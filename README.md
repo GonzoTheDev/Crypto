@@ -1,7 +1,7 @@
 # Swap
 
 Copyright (c) 2014-2019 The Monero Project.   
-Swap (previously known as Freehaven) is based on [Monero](README_original.md)
+Crypto is based on [Monero](README_original.md) and is forked from Swap.
 
 ![Build-Linux](https://github.com/swap-dev/swap/workflows/Build-Linux/badge.svg)
 
@@ -9,44 +9,44 @@ Swap (previously known as Freehaven) is based on [Monero](README_original.md)
 
 Active Branches:
 - Stable: master(latest/release)
-- Unstable: swap-v3.2dev(latest)
+- Unstable: crypto-v3.2dev(latest)
 - Testing: N/A
 
-To contribute to the Swap Project, please make all pull requests to the _swap-v3.2dev_ branch.<br/>
+To contribute to the Crypto Project, please make all pull requests to the _crypto-v3.2dev_ branch.<br/>
 For production, please use the _latest or tagged release_ of the _master_ branch.
 
 ## Resources
-- Webpage: [swap.foundation](https://swap.foundation)
-- Explorer: [explorer.swap.foundation](https://explorer.swap.foundation)
-- Pool List: [miningpoolstats.stream/swap](https://miningpoolstats.stream/swap)
-- GitHub: [github.com/swap-dev/swap](https://github.com/swap-dev/swap)
+- Webpage: [crypt-o-coin.cash](https://crypt-o-coin.cash)
+- Explorer: [explorer.crypt-o-coin.cash](https://explorer.crypt-o-coin.cash)
+- Pool List: [miningpoolstats.stream/crypto](https://miningpoolstats.stream/crypto)
+- GitHub: [https://github.com/GonzoTheDev/crypto](https://github.com/GonzoTheDev/crypto)
 
 ## Social/Contact
 
-- Bitcointalk [bitcointalk.org/index.php?topic=5083455](https://bitcointalk.org/index.php?topic=5083455)
-- Discord: [discord.gg/SmcFCPu](https://discord.gg/SmcFCPu)
-- Reddit: [r/SwapProject/](https://www.reddit.com/r/SwapProject/)
-- Twitter: [@Swap_Community](https://twitter.com/Swap_Community)
-- Email: xwpdev@gmail.com
+- Bitcointalk [https://bitcointalk.org/index.php?topic=5320548](https://bitcointalk.org/index.php?topic=5320548)
+- Discord: [https://discord.gg/upPCtgcMJu](https://discord.gg/upPCtgcMJu)
+- Reddit: [r/CryptoCoinProject/](https://www.reddit.com/r/CryptoCoinProject/)
+- Twitter: [@CryptoC54328932](https://twitter.com/CryptoC54328932)
+- Email: gonzosoftware0@gmail.com
 
 ## Specifications & Emission
 
-- Coin ticker: XWP
-- Total supply: 18,400,000 coins before tail emission
+- Coin ticker: CRYPTO
+- Total supply: 600,000,000 coins before tail emission
 - Tail emission: ~158,000 coins each year (starting at year 8)
 - Decimal places: 12
 - PoW hash algorithm: Cuckaroo29s
 - Block time: 15 seconds
 - Difficulty Adjustment Algorithm: Monero DAA
-- Genesis block: 2018-11-16 (November 16, 2018) at 09:06:03 (UTC)
+- Genesis block: 2021-03-01 (March 01, 2021) at 00:00:00 (UTC)
 - Premine: No
 - Developer fee: No
 - Founders reward: No
-- Mainnet default P2P port: 19949
-- Mainnet default RPC port: 19950
+- Mainnet default P2P port: 11111
+- Mainnet default RPC port: 22222
 
 ## Donation Address
-fh2jc6PbQYd4a5PY3ooPMZiPVniMy4MGcjSRBnoBVc1xLmdCHJ6hc98Ess2hpN2mDgPnCAXtDUUbmjWYutRvdoSr2Nps2o5wc
+CRYPTOADDRESS
 
 ## Build on linux
 
@@ -56,15 +56,15 @@ install deps:
 
 clone repo:
 
-`git clone --recursive https://github.com/swap-dev/swap`
+`git clone --recursive https://github.com/GonzoTheDev/crypto`
 
 build daemon and wallet:
 
-`cd swap && mkdir build && cd build && cmake .. && make daemon simplewallet`
+`cd crypto && mkdir build && cd build && cmake .. && make daemon simplewallet`
 
 or build everything:
 
-`cd swap && mkdir build && cd build && cmake .. && make`
+`cd crypto && mkdir build && cd build && cmake .. && make`
 
 ## Build on Windows (using MinGW)
 
@@ -74,9 +74,9 @@ install deps:
 
 clone repo:
 
-`git clone --recursive https://github.com/swap-dev/swap`
+`git clone --recursive https://github.com/GonzoTheDev/crypto`
 
 build daemon and wallet:
 
-`cd swap && make release-static-win64`
+`cd crypto && make release-static-win64`
 
