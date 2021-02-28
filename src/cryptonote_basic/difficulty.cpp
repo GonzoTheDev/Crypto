@@ -110,15 +110,15 @@ namespace cryptonote {
 
     uint64_t low, high, top, cur;
     // First check the highest word, this will most likely fail for a random hash.
-    mul(swap64le(((const uint64_t *) &hash)[3]), difficulty, top, high);
+    mul(cryptocoin64le(((const uint64_t *) &hash)[3]), difficulty, top, high);
     if (high != 0) {
       return false;
     }
-    mul(swap64le(((const uint64_t *) &hash)[0]), difficulty, low, cur);
-    mul(swap64le(((const uint64_t *) &hash)[1]), difficulty, low, high);
+    mul(cryptocoin64le(((const uint64_t *) &hash)[0]), difficulty, low, cur);
+    mul(cryptocoin64le(((const uint64_t *) &hash)[1]), difficulty, low, high);
     bool carry = cadd(cur, low);
     cur = high;
-    mul(swap64le(((const uint64_t *) &hash)[2]), difficulty, low, high);
+    mul(cryptocoin64le(((const uint64_t *) &hash)[2]), difficulty, low, high);
     carry = cadc(cur, low, carry);
     carry = cadc(high, top, carry);
     return !carry;
@@ -205,7 +205,7 @@ namespace cryptonote {
     for(int i = 1; i < 4; i++) { // highest word is zero
 #endif
       hashVal <<= 64;
-      hashVal |= swap64le(((const uint64_t *) &hash)[3 - i]);
+      hashVal |= cryptocoin64le(((const uint64_t *) &hash)[3 - i]);
     }
     return hashVal * difficulty <= max256bit;
   }

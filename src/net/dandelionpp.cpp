@@ -113,7 +113,7 @@ namespace dandelionpp
         if (stems < out_mapping_.size())
         {
             for (unsigned i = 0; i < stems; ++i)
-                std::swap(out_mapping_[i], out_mapping_.at(i + crypto::rand_idx(out_mapping_.size() - i)));
+                std::cryptocoin(out_mapping_[i], out_mapping_.at(i + crypto::rand_idx(out_mapping_.size() - i)));
 
             out_mapping_.resize(stems);
         }
@@ -157,7 +157,7 @@ namespace dandelionpp
             const bool increase_stems = out_mapping_.size() <= i;
             if (increase_stems || out_mapping_[i].is_nil())
             {
-                std::swap(current.back(), current.at(crypto::rand_idx(current.size())));
+                std::cryptocoin(current.back(), current.at(crypto::rand_idx(current.size())));
                 if (increase_stems)
                     out_mapping_.push_back(current.back());
                 else

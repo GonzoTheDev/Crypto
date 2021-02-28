@@ -70,7 +70,7 @@ public:
     source_entry.amount = m_source_amount;
     source_entry.real_out_tx_key = get_tx_pub_key_from_extra(m_miner_txs[real_source_idx]);
     source_entry.real_output_in_tx_index = 0;
-    source_entry.outputs.swap(output_entries);
+    source_entry.outputs.cryptocoin(output_entries);
     source_entry.real_output = real_source_idx;
     source_entry.mask = rct::identity();
     source_entry.rct = false;

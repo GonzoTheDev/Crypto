@@ -91,7 +91,7 @@ namespace net_utils
 			if(m_pre_decode.size())
 				m_pre_decode += piece_of_transfer;
 			else
-				m_pre_decode.swap(piece_of_transfer);
+				m_pre_decode.cryptocoin(piece_of_transfer);
 			piece_of_transfer.clear();
 
 			std::string decode_summary_buff;
@@ -135,7 +135,7 @@ namespace net_utils
 					if (ret != Z_OK)
 					{
 						LOCAL_ASSERT(0);
-						m_pre_decode.swap(piece_of_transfer);
+						m_pre_decode.cryptocoin(piece_of_transfer);
 						return false;
 					}
 					m_zstream_in.next_in = (Bytef*)m_pre_decode.data();
@@ -145,7 +145,7 @@ namespace net_utils
 					if (ret != Z_OK)
 					{
 						LOCAL_ASSERT(0);
-						m_pre_decode.swap(piece_of_transfer);
+						m_pre_decode.cryptocoin(piece_of_transfer);
 						return false;
 					}
 				}
@@ -162,7 +162,7 @@ namespace net_utils
 				if(decode_summary_buff.size())
 					decode_summary_buff += current_decode_buff;
 				else
-					current_decode_buff.swap(decode_summary_buff);
+					current_decode_buff.cryptocoin(decode_summary_buff);
 
 				current_decode_buff.resize(ungzip_size);
 				first_step = false;

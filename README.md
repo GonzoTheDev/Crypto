@@ -3,7 +3,7 @@
 Copyright (c) 2014-2019 The Monero Project.   
 Crypto is based on [Monero](README_original.md) and is forked from Swap.
 
-![Build-Linux](https://github.com/swap-dev/swap/workflows/Build-Linux/badge.svg)
+![Build-Linux](https://github.com/GonzoTheDev/crypto/workflows/Build-Linux/badge.svg)
 
 ## Production & Development
 

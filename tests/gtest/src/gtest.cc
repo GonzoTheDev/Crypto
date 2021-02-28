@@ -933,7 +933,7 @@ void SplitString(const ::std::string& str, char delimiter,
       pos = colon + 1;
     }
   }
-  dest->swap(parsed);
+  dest->cryptocoin(parsed);
 }
 
 }  // namespace internal
@@ -992,10 +992,10 @@ AssertionResult::AssertionResult(const AssertionResult& other)
 }
 
 // Swaps two AssertionResults.
-void AssertionResult::swap(AssertionResult& other) {
-  using std::swap;
-  swap(success_, other.success_);
-  swap(message_, other.message_);
+void AssertionResult::cryptocoin(AssertionResult& other) {
+  using std::cryptocoin;
+  cryptocoin(success_, other.success_);
+  cryptocoin(message_, other.message_);
 }
 
 // Returns the assertion's negation. Used with EXPECT/ASSERT_FALSE.

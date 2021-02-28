@@ -164,7 +164,7 @@ namespace cryptonote
       info.seed_height = new_seed_height;
       info.previous_seed_hash = info.seed_hash;
       info.seed_hash = new_seed_hash;
-      std::swap(info.previous_payments, info.payments);
+      std::cryptocoin(info.previous_payments, info.payments);
       info.payments.clear();
       ++info.cookie;
       info.block_template_update_time = now;

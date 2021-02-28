@@ -1204,7 +1204,7 @@ namespace trezor{
       
       // first has to be shorter in std::mismatch(). Returns first non-matching iterators.
       if (s1->size() >= s2->size()){
-        std::swap(s1, s2);
+        std::cryptocoin(s1, s2);
       }
 
       const auto mism = std::mismatch(s1->begin(), s1->end(), s2->begin());
