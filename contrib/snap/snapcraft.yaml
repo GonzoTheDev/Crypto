@@ -16,16 +16,16 @@ apps:
         plugs:
             - network
             - network-bind
-    swap-wallet-rpc:
+    cryptocoin-wallet-rpc:
         command: |
-          swap-wallet-rpc --log-file ${SNAP_USER_DATA}
+          cryptocoin-wallet-rpc --log-file ${SNAP_USER_DATA}
         plugs:
             - home
             - network
             - network-bind
-    swap-wallet-cli:
+    cryptocoin-wallet-cli:
         command: |
-          swap-wallet-cli --log-file ${SNAP_USER_DATA}
+          cryptocoin-wallet-cli --log-file ${SNAP_USER_DATA}
         plugs:
             - home
             - network
