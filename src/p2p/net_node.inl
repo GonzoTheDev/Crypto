@@ -614,10 +614,6 @@ namespace nodetool
     }
     else
     {
-      full_addrs.insert("58.185.155.109:11111"); // reeyon
-      full_addrs.insert("172.105.126.220:11111"); // SG
-      full_addrs.insert("176.58.102.113:11111");  // UK
-      full_addrs.insert("192.155.82.50:11111");   // CA
       full_addrs.insert("seed1.crypt-o-coin.cash:11111");
       full_addrs.insert("seed2.crypt-o-coin.cash:11111");
       full_addrs.insert("seed3.crypt-o-coin.cash:11111");
