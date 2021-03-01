@@ -46,7 +46,7 @@ For production, please use the _latest or tagged release_ of the _master_ branch
 - Mainnet default RPC port: 22222
 
 ## Donation Address
-CRYPTOADDRESS
+cashdj5d7FM9fh1ezdLg6ibJcwy3bkyXjEw6LuVWJTDceECuW4Ypa6aY3mqNEwPorLedHpLzSGrDef6n7CmHVeHb8w3XEVsM6R
 
 ## Build on linux
 
