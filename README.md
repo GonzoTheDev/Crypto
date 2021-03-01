@@ -32,7 +32,7 @@ For production, please use the _latest or tagged release_ of the _master_ branch
 ## Specifications & Emission
 
 - Coin ticker: CRYPTO
-- Total supply: 600,000,000 coins before tail emission
+- Total supply: 18,400,000 coins before tail emission
 - Tail emission: ~158,000 coins each year (starting at year 8)
 - Decimal places: 12
 - PoW hash algorithm: Cuckaroo29s
