@@ -68,7 +68,7 @@ namespace
   const command_line::arg_descriptor<std::string> arg_wallet_dir = {"wallet-dir", "Directory for newly created wallets"};
   const command_line::arg_descriptor<bool> arg_prompt_for_password = {"prompt-for-password", "Prompts for password when not provided", false};
 
-  constexpr const char default_rpc_username[] = "swap";
+  constexpr const char default_rpc_username[] = "crypto";
 
   boost::optional<tools::password_container> password_prompter(const char *prompt, bool verify)
   {
@@ -289,7 +289,7 @@ namespace tools
     {
       MINFO("The daemon is not set up to background mine.");
       MINFO("With background mining enabled, the daemon will mine when idle and not on battery.");
-      MINFO("Enabling this supports the network you are using, and makes you eligible for receiving new swap");
+      MINFO("Enabling this supports the network you are using, and makes you eligible for receiving new crypto");
       MINFO("Set setup-background-mining to 1 in cryptocoin-wallet-cli to change.");
       return;
     }
@@ -4503,7 +4503,7 @@ int main(int argc, char** argv) {
   std::tie(vm, should_terminate) = wallet_args::main(
     argc, argv,
     "cryptocoin-wallet-rpc [--wallet-file=<file>|--generate-from-json=<file>|--wallet-dir=<directory>] [--rpc-bind-port=<port>]",
-    tools::wallet_rpc_server::tr("This is the RPC swap wallet. It needs to connect to a swap\ndaemon to work correctly."),
+    tools::wallet_rpc_server::tr("This is the RPC Crypto wallet. It needs to connect to a crypto\ndaemon to work correctly."),
     desc_params,
     po::positional_options_description(),
     [](const std::string &s, bool emphasis){ epee::set_console_color(emphasis ? epee::console_color_white : epee::console_color_default, true); std::cout << s << std::endl; if (emphasis) epee::reset_console_color(); },
