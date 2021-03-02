@@ -3,7 +3,7 @@
 Copyright (c) 2014-2019 The Monero Project.   
 Crypto is based on [Monero](README_original.md) and is forked from Swap.
 
-![Build-Linux](https://github.com/cryptocoin-dev/swap/workflows/Build-Linux/badge.svg)
+![Build-Linux](https://github.com/GonzoTheDev/crypto/workflows/Build-Linux/badge.svg)
 
 ## Production & Development
 
@@ -52,7 +52,7 @@ cashdj5d7FM9fh1ezdLg6ibJcwy3bkyXjEw6LuVWJTDceECuW4Ypa6aY3mqNEwPorLedHpLzSGrDef6n
 
 install deps:
 
-`sudo apt-get install build-essential cmake pkg-config libboost-all-dev libssl-dev libzmq3-dev libunbound-dev libsodium-dev libreadline6-dev libpgm-dev libnorm-dev`
+`sudo apt-get install build-essential cmake pkg-config libboost-all-dev libssl-dev libzmq3-dev libunbound-dev libsodium-dev libreadline6-dev libpgm-dev libnorm-dev libhidapi-libusb0`
 
 clone repo:
 
