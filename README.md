@@ -14,7 +14,7 @@ Active Branches:
 - Unstable: crypto-dev(latest)
 - Testing: N/A
 
-To contribute to the Crypto Project, please make all pull requests to the _crypto-v3.2dev_ branch.<br/>
+To contribute to the Crypto Project, please make all pull requests to the _crypto-dev_ branch.<br/>
 For production, please use the _latest or tagged release_ of the _master_ branch.
 
 ## Resources
