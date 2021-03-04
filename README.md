@@ -1,3 +1,5 @@
+![Logo]https://raw.githubusercontent.com/GonzoTheDev/cryptocoin-gui/master/images/appicons/256x256.png
+
 # CryptoCoin
 
 Copyright (c) 2014-2019 The Monero Project.   
