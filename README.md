@@ -1,4 +1,4 @@
-![Logo]https://raw.githubusercontent.com/GonzoTheDev/cryptocoin-gui/master/images/appicons/256x256.png
+![Logo](https://raw.githubusercontent.com/GonzoTheDev/cryptocoin-gui/master/images/appicons/256x256.png)
 
 # CryptoCoin
 
