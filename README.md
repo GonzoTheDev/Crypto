@@ -11,7 +11,7 @@ Crypto is based on [Monero](README_original.md) and is forked from Swap.
 
 Active Branches:
 - Stable: master(latest/release)
-- Unstable: crypto-v3.2dev(latest)
+- Unstable: crypto-dev(latest)
 - Testing: N/A
 
 To contribute to the Crypto Project, please make all pull requests to the _crypto-v3.2dev_ branch.<br/>
