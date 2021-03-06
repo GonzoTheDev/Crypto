@@ -2,7 +2,7 @@
 
 # CryptoCoin
 
-Copyright (c) 2014-2019 The Monero Project.   
+Copyright (c) 2021 The CryptoCoin Project.   
 Crypto is based on [Monero](README_original.md) and is forked from Swap.
 
 ![Build-Linux](https://github.com/swap-dev/swap/workflows/Build-Linux/badge.svg)
