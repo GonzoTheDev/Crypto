@@ -20,7 +20,7 @@ For production, please use the _latest or tagged release_ of the _master_ branch
 ## Resources
 - Webpage: [crypt-o-coin.cash](https://crypt-o-coin.cash)
 - Explorer: [explorer.crypt-o-coin.cash](https://explorer.crypt-o-coin.cash)
-- Pool List: [miningpoolstats.stream/crypto](https://miningpoolstats.stream/crypto)
+- Pool List: [miningpoolstats.stream/cryptocoin](https://miningpoolstats.stream/cryptocoin)
 - GitHub: [https://github.com/GonzoTheDev/crypto](https://github.com/GonzoTheDev/crypto)
 
 ## Social/Contact
