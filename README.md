@@ -29,7 +29,7 @@ For production, please use the _latest or tagged release_ of the _master_ branch
 - Discord: [https://discord.gg/upPCtgcMJu](https://discord.gg/upPCtgcMJu)
 - Reddit: [r/CryptoCoinProject/](https://www.reddit.com/r/CryptoCoinProject/)
 - Twitter: [@CryptoC54328932](https://twitter.com/CryptoC54328932)
-- Email: gonzosoftware0@gmail.com
+- Email: therealcryptocoin@gmail.com
 
 ## Specifications & Emission
 
