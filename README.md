@@ -3,7 +3,7 @@
 # CryptoCoin
 
 Copyright (c) 2021 The CryptoCoin Project.   
-Crypto is based on [Monero](README_original.md) and is forked from Swap.
+Crypto is based on [Monero](README_original.md) and is forked from [Swap](https://github.com/swap-dev/swap).
 
 ![Build-Linux](https://github.com/swap-dev/swap/workflows/Build-Linux/badge.svg)
 
