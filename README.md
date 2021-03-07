@@ -28,7 +28,7 @@ For production, please use the _latest or tagged release_ of the _master_ branch
 - Bitcointalk [https://bitcointalk.org/index.php?topic=5320548](https://bitcointalk.org/index.php?topic=5320548)
 - Discord: [https://discord.gg/upPCtgcMJu](https://discord.gg/upPCtgcMJu)
 - Reddit: [r/CryptoCoinProject/](https://www.reddit.com/r/CryptoCoinProject/)
-- Twitter: [@CryptoC54328932](https://twitter.com/CryptoC54328932)
+- Twitter: [@CryptocoinDev](https://twitter.com/CryptocoinDev)
 - Email: therealcryptocoin@gmail.com
 
 ## Specifications & Emission
