@@ -184,16 +184,12 @@ namespace config
   uint8_t const FEE_CALCULATION_MAX_RETRIES = 10;
   uint64_t const DEFAULT_DUST_THRESHOLD = ((uint64_t)2000000000); // 2 * pow(10, 9)
   uint64_t const BASE_REWARD_CLAMP_THRESHOLD = ((uint64_t)100000000); // pow(10, 8)
-
-<<<<<<< Updated upstream
   uint64_t const CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0xe1f54;
   uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX = 0x7b54;
   uint64_t const CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 0x2756;
-=======
   uint64_t const CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0x2867;
   uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX = 0x3567;
   uint64_t const CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 0x2c68;
->>>>>>> Stashed changes
   uint16_t const P2P_DEFAULT_PORT = 11111;
   uint16_t const RPC_DEFAULT_PORT = 22222;
   uint16_t const ZMQ_RPC_DEFAULT_PORT = 33333;
@@ -216,21 +212,19 @@ namespace config
 
   namespace testnet
   {
-<<<<<<< Updated upstream
+
     uint64_t const CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0x15dbd4;
     uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX = 0x5f54;
     uint64_t const CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 0xd5;
     uint16_t const P2P_DEFAULT_PORT = 11112;
     uint16_t const RPC_DEFAULT_PORT = 22223;
     uint16_t const ZMQ_RPC_DEFAULT_PORT = 33334;
-=======
     uint64_t const CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0x5b1d;
     uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX = 0x519e;
     uint64_t const CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 0x641c;
     uint16_t const P2P_DEFAULT_PORT = 11112;
     uint16_t const RPC_DEFAULT_PORT = 22223;
     uint16_t const ZMQ_RPC_DEFAULT_PORT = 29952;
->>>>>>> Stashed changes
     boost::uuids::uuid const NETWORK_ID = { {
         0xa1 ,0xf7, 0x62, 0xde , 0xf7, 0x9b , 0x1f, 0x61, 0x17, 0x31, 0x00, 0x82, 0x16, 0xA1, 0xA1, 0x12
       } }; // Bender's daydream
@@ -240,15 +234,12 @@ namespace config
 
   namespace stagenet
   {
-<<<<<<< Updated upstream
     uint64_t const CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0x10d7;
     uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX = 0x5368;
     uint64_t const CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 0x20e68;
-=======
     uint64_t const CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0x2867;
     uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX = 0x3567;
     uint64_t const CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 0x2c68;
->>>>>>> Stashed changes
     uint16_t const P2P_DEFAULT_PORT = 11113;
     uint16_t const RPC_DEFAULT_PORT = 22224;
     uint16_t const ZMQ_RPC_DEFAULT_PORT = 33335;
