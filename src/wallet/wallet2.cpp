@@ -102,9 +102,15 @@ using namespace cryptonote;
 // used to target a given block weight (additional outputs may be added on top to build fee)
 #define TX_WEIGHT_TARGET(bytes) (bytes*2/3)
 
+<<<<<<< Updated upstream
 #define UNSIGNED_TX_PREFIX "Crypto unsigned tx set\004"
 #define SIGNED_TX_PREFIX "Crypto signed tx set\004"
 #define MULTISIG_UNSIGNED_TX_PREFIX "Crypto multisig unsigned tx set\001"
+=======
+#define UNSIGNED_TX_PREFIX "Cryptocoin unsigned tx set\004"
+#define SIGNED_TX_PREFIX "Cryptocoin signed tx set\004"
+#define MULTISIG_UNSIGNED_TX_PREFIX "Cryptocoin multisig unsigned tx set\001"
+>>>>>>> Stashed changes
 
 #define RECENT_OUTPUT_RATIO (0.5) // 50% of outputs are from the recent zone
 #define RECENT_OUTPUT_DAYS (1.8) // last 1.8 day makes up the recent zone (taken from monerolink.pdf, Miller et al)
@@ -118,11 +124,19 @@ using namespace cryptonote;
 #define SUBADDRESS_LOOKAHEAD_MAJOR 50
 #define SUBADDRESS_LOOKAHEAD_MINOR 200
 
+<<<<<<< Updated upstream
 #define KEY_IMAGE_EXPORT_FILE_MAGIC "Crypto key image export\003"
 
 #define MULTISIG_EXPORT_FILE_MAGIC "Crypto multisig export\001"
 
 #define OUTPUT_EXPORT_FILE_MAGIC "Crypto output export\004"
+=======
+#define KEY_IMAGE_EXPORT_FILE_MAGIC "Cryptocoin key image export\003"
+
+#define MULTISIG_EXPORT_FILE_MAGIC "Cryptocoin multisig export\001"
+
+#define OUTPUT_EXPORT_FILE_MAGIC "Cryptocoin output export\004"
+>>>>>>> Stashed changes
 
 #define SEGREGATION_FORK_HEIGHT 99999999
 #define TESTNET_SEGREGATION_FORK_HEIGHT 99999999
@@ -1791,8 +1805,8 @@ void wallet2::scan_output(const cryptonote::transaction &tx, bool miner_tx, cons
     if (!m_encrypt_keys_after_refresh)
     {
       boost::optional<epee::wipeable_string> pwd = m_callback->on_get_password(pool ? "output found in pool" : "output received");
-      THROW_WALLET_EXCEPTION_IF(!pwd, error::password_needed, tr("Password is needed to compute key image for incoming swap"));
-      THROW_WALLET_EXCEPTION_IF(!verify_password(*pwd), error::password_needed, tr("Invalid password: password is needed to compute key image for incoming swap"));
+      THROW_WALLET_EXCEPTION_IF(!pwd, error::password_needed, tr("Password is needed to compute key image for incoming crypto"));
+      THROW_WALLET_EXCEPTION_IF(!verify_password(*pwd), error::password_needed, tr("Invalid password: password is needed to compute key image for incoming crypto"));
       decrypt_keys(*pwd);
       m_encrypt_keys_after_refresh = *pwd;
     }
@@ -13245,7 +13259,7 @@ std::string wallet2::make_uri(const std::string &address, const std::string &pay
     }
   }
 
-  std::string uri = "swap:" + address;
+  std::string uri = "crypto:" + address;
   unsigned int n_fields = 0;
 
   if (!payment_id.empty())
@@ -13274,9 +13288,9 @@ std::string wallet2::make_uri(const std::string &address, const std::string &pay
 //----------------------------------------------------------------------------------------------------
 bool wallet2::parse_uri(const std::string &uri, std::string &address, std::string &payment_id, uint64_t &amount, std::string &tx_description, std::string &recipient_name, std::vector<std::string> &unknown_parameters, std::string &error)
 {
-  if (uri.substr(0, 7) != "swap:")
+  if (uri.substr(0, 7) != "crypto:")
   {
-    error = std::string("URI has wrong scheme (expected \"swap:\"): ") + uri;
+    error = std::string("URI has wrong scheme (expected \"crypto:\"): ") + uri;
     return false;
   }
 
@@ -13596,7 +13610,11 @@ mms::multisig_wallet_state wallet2::get_multisig_wallet_state() const
   state.num_transfer_details = m_transfers.size();
   if (state.multisig)
   {
+<<<<<<< Updated upstream
     THROW_WALLET_EXCEPTION_IF(!m_original_keys_available, error::wallet_internal_error, "MMS use not possible because own original Crypto address not available");
+=======
+    THROW_WALLET_EXCEPTION_IF(!m_original_keys_available, error::wallet_internal_error, "MMS use not possible because own original Cryptocoin address not available");
+>>>>>>> Stashed changes
     state.address = m_original_address;
     state.view_secret_key = m_original_view_secret_key;
   }

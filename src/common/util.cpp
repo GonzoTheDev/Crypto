@@ -676,7 +676,7 @@ std::string get_nix_version_display_string()
   {
     ub_ctx *ctx = ub_ctx_create();
     if (!ctx) return false; // cheat a bit, should not happen unless OOM
-    char *monero = strdup("swap"), *unbound = strdup("unbound");
+    char *monero = strdup("cryptocoin"), *unbound = strdup("unbound");
     ub_ctx_zone_add(ctx, monero, unbound); // this calls ub_ctx_finalize first, then errors out with UB_SYNTAX
     free(unbound);
     free(monero);
@@ -1299,7 +1299,11 @@ std::string get_nix_version_display_string()
   // calculating sync time estimates
   uint64_t cumulative_block_sync_weight(cryptonote::network_type nettype, uint64_t start_block, uint64_t num_blocks)
   {
+<<<<<<< Updated upstream
     // Per block sync time is not expected to vary much on Crypto Network.
+=======
+    // Per block sync time is not expected to vary much on Cryptocoin Network.
+>>>>>>> Stashed changes
     return num_blocks;
   }
 

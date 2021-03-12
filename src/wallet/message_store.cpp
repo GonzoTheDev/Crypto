@@ -493,7 +493,11 @@ bool message_store::get_signer_index_by_monero_address(const cryptonote::account
       return true;
     }
   }
+<<<<<<< Updated upstream
   MWARNING("No authorized signer with Crypto address " << account_address_to_string(monero_address));
+=======
+  MWARNING("No authorized signer with Cryptocoin address " << account_address_to_string(monero_address));
+>>>>>>> Stashed changes
   return false;
 }
 

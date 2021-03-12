@@ -35,7 +35,11 @@
 
 namespace daemon_args
 {
+<<<<<<< Updated upstream
   std::string const WINDOWS_SERVICE_NAME = "Crypto Daemon";
+=======
+  std::string const WINDOWS_SERVICE_NAME = "Cryptocoin Daemon";
+>>>>>>> Stashed changes
 
   const command_line::arg_descriptor<std::string, false, true, 2> arg_config_file = {
     "config-file"

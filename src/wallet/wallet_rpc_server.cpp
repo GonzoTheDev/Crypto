@@ -768,7 +768,11 @@ namespace tools
           }
           if (addresses.empty())
           {
+<<<<<<< Updated upstream
             er.message = std::string("No Crypto address found at ") + url;
+=======
+            er.message = std::string("No Cryptocoin address found at ") + url;
+>>>>>>> Stashed changes
             return {};
           }
           return addresses[0];
@@ -2002,7 +2006,11 @@ namespace tools
         }
         if (addresses.empty())
         {
+<<<<<<< Updated upstream
           er.message = std::string("No Crypto address found at ") + url;
+=======
+          er.message = std::string("No Cryptocoin address found at ") + url;
+>>>>>>> Stashed changes
           return {};
         }
         return addresses[0];
@@ -2811,7 +2819,11 @@ namespace tools
         }
         if (addresses.empty())
         {
+<<<<<<< Updated upstream
           er.message = std::string("No Crypto address found at ") + url;
+=======
+          er.message = std::string("No Cryptocoin address found at ") + url;
+>>>>>>> Stashed changes
           return {};
         }
         return addresses[0];
@@ -2865,7 +2877,11 @@ namespace tools
           }
           if (addresses.empty())
           {
+<<<<<<< Updated upstream
             er.message = std::string("No Crypto address found at ") + url;
+=======
+            er.message = std::string("No Cryptocoin address found at ") + url;
+>>>>>>> Stashed changes
             return {};
           }
           return addresses[0];
@@ -4148,7 +4164,11 @@ namespace tools
             }
             if (addresses.empty())
             {
+<<<<<<< Updated upstream
               er.message = std::string("No Crypto address found at ") + url;
+=======
+              er.message = std::string("No Cryptocoin address found at ") + url;
+>>>>>>> Stashed changes
               return {};
             }
             address = addresses[0];
@@ -4502,8 +4522,13 @@ int main(int argc, char** argv) {
   bool should_terminate = false;
   std::tie(vm, should_terminate) = wallet_args::main(
     argc, argv,
+<<<<<<< Updated upstream
     "cryptocoin-wallet-rpc [--wallet-file=<file>|--generate-from-json=<file>|--wallet-dir=<directory>] [--rpc-bind-port=<port>]",
     tools::wallet_rpc_server::tr("This is the RPC Crypto wallet. It needs to connect to a crypto\ndaemon to work correctly."),
+=======
+    "crypto-wallet-rpc [--wallet-file=<file>|--generate-from-json=<file>|--wallet-dir=<directory>] [--rpc-bind-port=<port>]",
+    tools::wallet_rpc_server::tr("This is the RPC crypto wallet. It needs to connect to a crypto\ndaemon to work correctly."),
+>>>>>>> Stashed changes
     desc_params,
     po::positional_options_description(),
     [](const std::string &s, bool emphasis){ epee::set_console_color(emphasis ? epee::console_color_white : epee::console_color_default, true); std::cout << s << std::endl; if (emphasis) epee::reset_console_color(); },

@@ -209,5 +209,9 @@ EXPOSE 22223
 EXPOSE 11113
 EXPOSE 22224
 
+<<<<<<< Updated upstream
 ENTRYPOINT ["cryptocoind", "--p2p-bind-ip=0.0.0.0", "--p2p-bind-port=11111", "--rpc-bind-ip=0.0.0.0", "--rpc-bind-port=22222", "--non-interactive", "--confirm-external-bind"]
+=======
+ENTRYPOINT ["cryptocoin", "--p2p-bind-ip=0.0.0.0", "--p2p-bind-port=11111", "--rpc-bind-ip=0.0.0.0", "--rpc-bind-port=22222", "--non-interactive", "--confirm-external-bind"]
+>>>>>>> Stashed changes
 

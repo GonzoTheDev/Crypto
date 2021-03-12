@@ -2690,7 +2690,7 @@ namespace cryptonote
       return true;
     }
 
-    static const char software[] = "swap";
+    static const char software[] = "crypto";
 #ifdef BUILD_TAG
     static const char buildtag[] = BOOST_PP_STRINGIZE(BUILD_TAG);
     static const char subdir[] = "cli";

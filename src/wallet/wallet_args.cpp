@@ -131,7 +131,7 @@ namespace wallet_args
     command_line::add_arg(desc_params, arg_max_concurrency);
     command_line::add_arg(desc_params, arg_config_file);
 
-    i18n_set_language("translations", "swap", lang);
+    i18n_set_language("translations", "crypto", lang);
 
     po::options_description desc_all;
     desc_all.add(desc_general).add(desc_params);
@@ -144,8 +144,13 @@ namespace wallet_args
 
       if (command_line::get_arg(vm, command_line::arg_help))
       {
+<<<<<<< Updated upstream
         Print(print) << "Crypto '" << MONERO_RELEASE_NAME << "' (v" << MONERO_VERSION_FULL << ")" << ENDL;
         Print(print) << wallet_args::tr("This is the command line swap wallet. It needs to connect to a swap\n"
+=======
+        Print(print) << "Cryptocoin '" << MONERO_RELEASE_NAME << "' (v" << MONERO_VERSION_FULL << ")" << ENDL;
+        Print(print) << wallet_args::tr("This is the command line crypto wallet. It needs to connect to a crypto\n"
+>>>>>>> Stashed changes
 												  "daemon to work correctly.") << ENDL;
         Print(print) << wallet_args::tr("Usage:") << ENDL << "  " << usage;
         Print(print) << desc_all;
@@ -154,7 +159,11 @@ namespace wallet_args
       }
       else if (command_line::get_arg(vm, command_line::arg_version))
       {
+<<<<<<< Updated upstream
         Print(print) << "Crypto '" << MONERO_RELEASE_NAME << "' (v" << MONERO_VERSION_FULL << ")";
+=======
+        Print(print) << "Cryptocoin '" << MONERO_RELEASE_NAME << "' (v" << MONERO_VERSION_FULL << ")";
+>>>>>>> Stashed changes
         should_terminate = true;
         return true;
       }
@@ -205,7 +214,11 @@ namespace wallet_args
     if (!command_line::is_arg_defaulted(vm, arg_max_concurrency))
       tools::set_max_concurrency(command_line::get_arg(vm, arg_max_concurrency));
 
+<<<<<<< Updated upstream
     Print(print) << "Crypto '" << MONERO_RELEASE_NAME << "' (v" << MONERO_VERSION_FULL << ")";
+=======
+    Print(print) << "Cryptocoin '" << MONERO_RELEASE_NAME << "' (v" << MONERO_VERSION_FULL << ")";
+>>>>>>> Stashed changes
 
     if (!command_line::is_arg_defaulted(vm, arg_log_level))
       MINFO("Setting log level = " << command_line::get_arg(vm, arg_log_level));

@@ -40,7 +40,11 @@
 
 namespace daemonize
 {
+<<<<<<< Updated upstream
   std::string const t_executor::NAME = "Crypto Daemon";
+=======
+  std::string const t_executor::NAME = "Cryptocoin Daemon";
+>>>>>>> Stashed changes
 
   void t_executor::init_options(
       boost::program_options::options_description & configurable_options
@@ -58,7 +62,11 @@ namespace daemonize
       boost::program_options::variables_map const & vm
     )
   {
+<<<<<<< Updated upstream
     LOG_PRINT_L0("Crypto '" << MONERO_RELEASE_NAME << "' (v" << MONERO_VERSION_FULL << ") Daemonised");
+=======
+    LOG_PRINT_L0("Cryptocoin '" << MONERO_RELEASE_NAME << "' (v" << MONERO_VERSION_FULL << ") Daemonised");
+>>>>>>> Stashed changes
     return t_daemon{vm, public_rpc_port};
   }
 

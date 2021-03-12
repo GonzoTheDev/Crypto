@@ -172,16 +172,27 @@ int main(int argc, char const * argv[])
 
     if (command_line::get_arg(vm, command_line::arg_help))
     {
+<<<<<<< Updated upstream
       std::cout << "Crypto '" << MONERO_RELEASE_NAME << "' (v" << MONERO_VERSION_FULL << ")" << ENDL << ENDL;
+=======
+      std::cout << "Cryptocoin '" << MONERO_RELEASE_NAME << "' (v" << MONERO_VERSION_FULL << ")" << ENDL << ENDL;
+>>>>>>> Stashed changes
       std::cout << "Usage: " + std::string{argv[0]} + " [options|settings] [daemon_command...]" << std::endl << std::endl;
       std::cout << visible_options << std::endl;
       return 0;
     }
 
+<<<<<<< Updated upstream
     // Crypto Version
     if (command_line::get_arg(vm, command_line::arg_version))
     {
       std::cout << "Crypto '" << MONERO_RELEASE_NAME << "' (v" << MONERO_VERSION_FULL << ")" << ENDL;
+=======
+    // Cryptocoin Version
+    if (command_line::get_arg(vm, command_line::arg_version))
+    {
+      std::cout << "Cryptocoin '" << MONERO_RELEASE_NAME << "' (v" << MONERO_VERSION_FULL << ")" << ENDL;
+>>>>>>> Stashed changes
       return 0;
     }
 
@@ -268,7 +279,11 @@ int main(int argc, char const * argv[])
       tools::set_max_concurrency(command_line::get_arg(vm, daemon_args::arg_max_concurrency));
 
     // logging is now set up
+<<<<<<< Updated upstream
     MGINFO("Crypto '" << MONERO_RELEASE_NAME << "' (v" << MONERO_VERSION_FULL << ")");
+=======
+    MGINFO("Cryptocoin '" << MONERO_RELEASE_NAME << "' (v" << MONERO_VERSION_FULL << ")");
+>>>>>>> Stashed changes
 
     // If there are positional options, we're running a daemon command
     {

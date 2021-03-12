@@ -1,10 +1,19 @@
 [Unit]
+<<<<<<< Updated upstream:utils/systemd/cryptocoind.service
 Description=Crypto Full Node
 After=network.target
 
 [Service]
 User=cryptocoin
 Group=cryptocoin
+=======
+Description=Cryptocoin Full Node
+After=network.target
+
+[Service]
+User=crypto
+Group=crypto
+>>>>>>> Stashed changes:utils/systemd/swapd.service
 WorkingDirectory=~
 RuntimeDirectory=cryptocoin
 
