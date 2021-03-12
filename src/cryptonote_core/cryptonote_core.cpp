@@ -205,11 +205,11 @@ namespace cryptonote
   static const command_line::arg_descriptor<std::string> arg_block_rate_notify = {
     "block-rate-notify"
   , "Run a program when the block rate undergoes large fluctuations. This might "
-<<<<<<< Updated upstream
+//<<<<<<< Updated upstream
     "be a sign of large amounts of hash rate going on and off the Crypto network, "
-=======
+//=======
     "be a sign of large amounts of hash rate going on and off the Cryptocoin network, "
->>>>>>> Stashed changes
+//>>>>>>> Stashed changes
     "and thus be of potential interest in predicting attacks. %t will be replaced "
     "by the number of minutes for the observation window, %b by the number of "
     "blocks observed within that window, and %e by the number of blocks that was "
@@ -491,11 +491,11 @@ namespace cryptonote
       if (boost::filesystem::exists(old_files / "blockchain.bin"))
       {
         MWARNING("Found old-style blockchain.bin in " << old_files.string());
-<<<<<<< Updated upstream
+//<<<<<<< Updated upstream
         MWARNING("Crypto now uses a new format. You can either remove blockchain.bin to start syncing");
-=======
+//=======
         MWARNING("Cryptocoin now uses a new format. You can either remove blockchain.bin to start syncing");
->>>>>>> Stashed changes
+//>>>>>>> Stashed changes
         MWARNING("the blockchain anew, or use cryptocoin-blockchain-export and cryptocoin-blockchain-import to");
         MWARNING("convert your existing blockchain.bin to the new format. See README.md for instructions.");
         return false;
@@ -1644,11 +1644,11 @@ namespace cryptonote
     {
       std::string main_message;
       if (m_offline)
-<<<<<<< Updated upstream
+//<<<<<<< Updated upstream
         main_message = "The daemon is running offline and will not attempt to sync to the Crypto network.";
-=======
+//=======
         main_message = "The daemon is running offline and will not attempt to sync to the Cryptocoin network.";
->>>>>>> Stashed changes
+//>>>>>>> Stashed changes
       else
         main_message = "The daemon will start synchronizing with the network. This may take a long time to complete.";
       MGINFO_YELLOW(ENDL << "**********************************************************************" << ENDL
