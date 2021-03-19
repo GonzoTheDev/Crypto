@@ -603,30 +603,17 @@ namespace nodetool
     std::set<std::string> full_addrs;
     if (nettype == cryptonote::TESTNET)
     {
-<<<<<<< Updated upstream
-      full_addrs.insert("seed-t.crypt-o-coin.cash:11112");
-    }
-    else if (nettype == cryptonote::STAGENET)
-    {
-      full_addrs.insert("seed-s.crypt-o-coin.cash:11113");
-=======
       full_addrs.insert("seed1.crypt-o-coin.cash:22223");
     }
     else if (nettype == cryptonote::STAGENET)
     {
       full_addrs.insert("seed1.crypt-o-coin.cash:33334");
->>>>>>> Stashed changes
     }
     else if (nettype == cryptonote::FAKECHAIN)
     {
     }
     else
     {
-<<<<<<< Updated upstream
-      full_addrs.insert("seed1.crypt-o-coin.cash:11111");
-      full_addrs.insert("seed2.crypt-o-coin.cash:11111");
-      full_addrs.insert("seed3.crypt-o-coin.cash:11111");
-=======
       full_addrs.insert("seed1.crypt-o-coin.cash:22222"); // reeyon
       full_addrs.insert("seed2.crypt-o-coin.cash:22222"); // SG
       full_addrs.insert("seed3.crypt-o-coin.cash:22222");  // UK
@@ -634,7 +621,6 @@ namespace nodetool
       full_addrs.insert("node2.crypt-o-coin.cash:22222");
       full_addrs.insert("node3.crypt-o-coin.cash:22222");
       full_addrs.insert("node4.crypt-o-coin.cashe:22222");
->>>>>>> Stashed changes
     }
     return full_addrs;
   }
