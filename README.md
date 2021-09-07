@@ -37,7 +37,7 @@ For production, please use the _latest or tagged release_ of the _master_ branch
 - Total supply: 18,400,000 coins before tail emission
 - Tail emission: ~158,000 coins each year (starting at year 8)
 - Decimal places: 12
-- PoW hash algorithm: Cuckaroo29s
+- PoW hash algorithm: Cryptonight Superfast
 - Block time: 15 seconds
 - Difficulty Adjustment Algorithm: Monero DAA
 - Genesis block: 2021-03-01 (March 01, 2021) at 00:00:00 (UTC)
